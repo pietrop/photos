@@ -16,3 +16,5 @@ photos
 
 - events?
   bbc event?
+
+<!-- && echo 'photos.pietropassarelli.com' >>  out/CNAME -->

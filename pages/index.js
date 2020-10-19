@@ -70,9 +70,10 @@ export default function Home() {
     setCurrentSection(sectionName);
   };
 
-  const listElement = (sectionName) => {
+  const listElement = (sectionName, index) => {
     return (
       <li
+        key={index}
         onClick={(e) => {
           // console.log(e.target.innerText);
           setCurrentSectionImages(e.target.innerText.toLowerCase());
@@ -140,6 +141,45 @@ export default function Home() {
           color: #404040;
         }
 
+        .main-wrapper {
+          display: flex;
+        }
+
+        /*
+        * Tablet
+        * Medium devices (tablets) 
+        */
+        @media (max-width: 991.98px) {
+          /*    ...  */
+          .main-wrapper {
+            padding: 1em;
+            flex-direction: column;
+          }
+          .photo-image {
+            width: 100% !important;
+          }
+
+          .title {
+            margin: 0px;
+          }
+        }
+
+        /**
+         *  Desktop
+         */
+        @media (min-width: 991.99px) {
+          // TODO: do, responsive view for mobile...
+          .main-wrapper {
+            padding: 3em;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          .list.contacts {
+            margin-top: 3em;
+          }
+        }
+
         .main-container {
           display: flex;
           flex-direction: column;
@@ -156,19 +196,7 @@ export default function Home() {
           // color: white;
           text-align: left;
           padding-left: 3em;
-        }
-
-        .main-wrapper {
-          padding-top: 3em;
-          padding-left: 3em;
-        }
-
-        // TODO: do, responsive view for mobile...
-        .main-wrapper {
-          display: flex;
-          flex-direction: row;
-          /*background-color: red;*/
-          justify-content: flex-start;
+          background-color: white;
         }
 
         .side-bar {
@@ -258,7 +286,6 @@ export default function Home() {
               {data.page.author.lastname}
             </h1>
             <div className="menu">
-              <br />
               <ul className="list">
                 {data.albums.map((album) => {
                   if (album.subcategory) {
@@ -277,7 +304,6 @@ export default function Home() {
                   }
                 })}
               </ul>
-              <br />
               <ul className="list contacts">
                 <Link href="https://pietropassarelli.com">
                   <a className={'link'} target="_blank" rel="noopener noreferrer">
