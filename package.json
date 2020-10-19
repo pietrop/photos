@@ -1,0 +1,22 @@
+{
+  "name": "learn-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy:ghpages": "gh-pages -d .next"
+  },
+  "dependencies": {
+    "@use-it/event-listener": "^0.1.5",
+    "arrow-keys-react": "^1.0.6",
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "simple-react-lightbox": "^3.3.4-1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
