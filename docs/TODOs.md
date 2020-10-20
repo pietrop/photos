@@ -1,7 +1,7 @@
 - [x] Keyboard shortcuts for --> <-- when not in thumbnail view?
 - [x] caption, white text on black background, when in full image, below the image. (on hover when thumbnails? or no?)
 
-- [ ] favicon
+- [~] favicon
 
 photos
 

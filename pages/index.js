@@ -185,6 +185,10 @@ export default function Home() {
           li {
             margin-left: 1em;
           }*/
+
+          .footer {
+            padding-left: 1em !important;
+          }
         }
 
         /**
@@ -367,10 +371,10 @@ export default function Home() {
             {isLightBoxOpen ? (
               <Lightbox startIndex={imageIndex} images={imagesForLightbox} onClose={closedLightBox} allowZoom={false} allowRotate={false} />
             ) : (
-              <small onClick={openLightBox}>VIEW AS LIGHTBOX |</small>
+              <small onClick={openLightBox}>⤢ |</small>
             )}
             <span className={'cursor-pointer'} onClick={onToggleThumbnailsView}>
-              <small> {showThumnails ? ' HIDE THUMBNAILS' : ' SHOW THUMBNAILS'}</small>
+              <small> {showThumnails ? ' HIDE THUMBNAILS' : 'SHOW THUMBNAILS'}</small>
             </span>
             {!showThumnails ? (
               <>
