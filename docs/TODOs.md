@@ -18,3 +18,10 @@ photos
   bbc event?
 
 <!-- && echo 'photos.pietropassarelli.com' >>  out/CNAME -->
+
+<!-- inspiration from
+https://www.fourminutestomidnightphotography.com/
+http://www.marcusyam.com/
+https://www.josealvaradophoto.com/
+
+ -->

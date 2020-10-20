@@ -33,6 +33,18 @@
                 {
                     "src": "images/home/246934381_2752e1b141_o.jpg",
                     "caption": "July 15, 2006. Plock - Poland. Olympus E-300. ƒ5.6 1/80 ISO 100, 25 mm 4/3"
+                },
+                {
+                    "src": "images/home/47418719_232b94a0fb_o.jpg",
+                    "caption": "July 30, 2005. Amsterdam - Holland. Olympus E-300. ƒ4.8 1/100 ISO 400  33 mm 4/3"
+                },
+                {
+                    "src": "images/home/75378935_f24a6c1cb5_o.jpg",
+                    "caption": "November 27, 2005. Bologna - Italy. Olympus E-300. ƒ5.0 1/250 ISO 100 123 mm  4/3"
+                },
+                {
+                    "src": "images/home/110660311_084fad8e6d_o.jpg",
+                    "caption": "December 27, 2005.  Italy. Olympus E-300. ƒ/7.1 1/125 ISO 100 45 mm 4/3"
                 }
             ]
         },
@@ -101,6 +113,31 @@
                         {
                             "src": "images/travel/auschwitz/aus15.jpeg",
                             "caption": "March 16, 2005. Auschwitz - Poland. Ricoh Caplio GX."
+                        }
+                    ]
+                },
+                {
+                    "name": "rovinj",
+                    "photos": [
+                        {
+                            "src": "images/travel/rovinj/49475621_6f133cc016_o.jpg",
+                            "caption": "August 20, 2005. Rovinj - Croatia. Olympus E-300. ƒ8.0 1/500 ISO 100  150 mm 4/3"
+                        },
+                        {
+                            "src": "images/travel/rovinj/49478910_d4911b73a1_o.jpg",
+                            "caption": "August 20, 2005. Rovinj - Croatia. Olympus E-300. ƒ5.0 1/160 ISO 100 40 mm 4/3"
+                        },
+                        {
+                            "src": "images/travel/rovinj/49475619_9dee50dbd0_o.jpg",
+                            "caption": "August 18, 2005. Rovinj - Croatia. Olympus E-300. ƒ5.0 1/1250 ISO 100  150mm 4/3"
+                        },
+                        {
+                            "src": "images/travel/rovinj/49475615_fa92e8d7e1_o.jpg",
+                            "caption": "August 16, 2005. Rovinj - Croatia. Olympus E-300. ƒ4.5  1/40 ISO 100 150 mm 4/3"
+                        },
+                        {
+                            "src": "images/travel/rovinj/49475623_1e22cdc4bb_o.jpg",
+                            "caption": "August 20, 2005. Rovinj - Croatia. Olympus E-300. ƒ5.6  1/320 ISO 100 141 mm 4/3"
                         }
                     ]
                 }

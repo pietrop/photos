@@ -73,6 +73,7 @@ export default function Home() {
   const listElement = (sectionName, index) => {
     return (
       <li
+        className={'navigationElement'}
         key={index}
         onClick={(e) => {
           // console.log(e.target.innerText);
@@ -149,7 +150,7 @@ export default function Home() {
         * Tablet
         * Medium devices (tablets) 
         */
-        @media (max-width: 991.98px) {
+        @media (max-width: 1024.98px) {
           /*    ...  */
           .main-wrapper {
             padding: 1em;
@@ -162,12 +163,19 @@ export default function Home() {
           .title {
             margin: 0px;
           }
+
+          /*  ul.list > li {
+            display: inline-block;
+          }
+          li {
+            margin-left: 1em;
+          }*/
         }
 
         /**
          *  Desktop
          */
-        @media (min-width: 991.99px) {
+        @media (min-width: 1024.99px) {
           // TODO: do, responsive view for mobile...
           .main-wrapper {
             padding: 3em;
@@ -177,6 +185,10 @@ export default function Home() {
 
           .list.contacts {
             margin-top: 3em;
+          }
+          .title {
+            width: 5em;
+            word-wrap: break-word;
           }
         }
 
@@ -281,12 +293,10 @@ export default function Home() {
         <div className="main-wrapper">
           <div className="side-bar">
             <h1 className={'title'}>
-              {data.page.author.name}
-              <br />
-              {data.page.author.lastname}
+              {data.page.author.name} {data.page.author.lastname}
             </h1>
             <div className="menu">
-              <ul className="list">
+              <ul className="list navigation">
                 {data.albums.map((album) => {
                   if (album.subcategory) {
                     const result = album.subcategory.map((subcategoryAlbum) => {
@@ -295,7 +305,7 @@ export default function Home() {
 
                     return (
                       <>
-                        <li>{capitalize(album.category)}</li>
+                        <li className={'navigationElement'}>{capitalize(album.category)}</li>
                         <ul className="nested-list">{result}</ul>
                       </>
                     );
