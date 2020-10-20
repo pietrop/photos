@@ -226,6 +226,7 @@ export default function Home() {
           flex-grow: 8;
           overflow: scroll;
           max-height: 90vh;
+          background-color: white;
         }
 
         .list {
