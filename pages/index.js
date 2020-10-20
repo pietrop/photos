@@ -3,6 +3,8 @@ import Link from 'next/link';
 import data from '../data/data.json';
 import React, { useState, useEffect } from 'react';
 import useEventListener from '@use-it/event-listener';
+import Lightbox from 'react-awesome-lightbox';
+// You need to import the CSS only once
 
 const capitalize = (s) => {
   if (typeof s !== 'string') return '';
@@ -17,6 +19,15 @@ export default function Home() {
   const [images, setImages] = useState(INITIAL_ALBUM_IMAGES);
   const [showThumnails, setShowThumbnails] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
+  const [isLightBoxOpen, setLightBox] = useState(false);
+
+  const closedLightBox = () => {
+    setLightBox(false);
+  };
+
+  const openLightBox = () => {
+    setLightBox(true);
+  };
 
   useEffect(() => {
     const currentAlbum = data.albums.find((album) => {
@@ -119,6 +130,10 @@ export default function Home() {
       setImageIndex(0);
     }
   };
+
+  const imagesForLightbox = images.map((image) => {
+    return { url: image.src, title: image.caption };
+  });
 
   return (
     <>
@@ -288,6 +303,16 @@ export default function Home() {
           color: black;
         }
 
+        /*lightbox override background color*/
+        .lb-container {
+          background-color: black !important;
+        }
+
+        .lb-container .lb-header {
+          // background: white;
+          // box-shadow: none;
+          // color: black;
+        }
         // TODO: need different CSS for portrait and landscape orientation?
       `}</style>
       <div className="main-container">
@@ -339,6 +364,11 @@ export default function Home() {
         </div>
         <div className="footer">
           <p className="thumnail-toggle">
+            {isLightBoxOpen ? (
+              <Lightbox startIndex={imageIndex} images={imagesForLightbox} onClose={closedLightBox} allowZoom={false} allowRotate={false} />
+            ) : (
+              <small onClick={openLightBox}>VIEW AS LIGHTBOX |</small>
+            )}
             <span className={'cursor-pointer'} onClick={onToggleThumbnailsView}>
               <small> {showThumnails ? ' HIDE THUMBNAILS' : ' SHOW THUMBNAILS'}</small>
             </span>
